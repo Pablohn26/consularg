@@ -61,6 +61,8 @@ gem 'browser'
 gem 'turnout'
 gem 'redcarpet'
 
+gem "faker"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -81,7 +83,7 @@ group :development, :test do
   gem "capistrano-rvm",                require: false
   gem 'capistrano3-delayed-job', '~> 1.0'
   gem "bullet"
-  gem "faker"
+  #gem "faker"
 end
 
 group :test do
