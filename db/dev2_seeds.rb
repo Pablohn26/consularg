@@ -2,30 +2,6 @@
 
 #DatabaseCleaner.clean_with :truncation
 
-puts "Creating Settings"
-Setting.create(key: 'official_level_1_name', value: 'Empleados públicos')
-Setting.create(key: 'official_level_2_name', value: 'Organización Municipal')
-Setting.create(key: 'official_level_3_name', value: 'Directores generales')
-Setting.create(key: 'official_level_4_name', value: 'Concejales')
-Setting.create(key: 'official_level_5_name', value: 'Alcaldesa')
-Setting.create(key: 'max_ratio_anon_votes_on_debates', value: '50')
-Setting.create(key: 'max_votes_for_debate_edit', value: '1000')
-Setting.create(key: 'max_votes_for_proposal_edit', value: '1000')
-Setting.create(key: 'proposal_code_prefix', value: 'MAD')
-Setting.create(key: 'votes_for_proposal_success', value: '100')
-
-Setting.create(key: 'blog_url', value: '/blog')
-Setting.create(key: 'url', value: 'http://localhost:3000')
-Setting.create(key: 'org_name', value: 'Consul')
-Setting.create(key: 'place_name', value: 'City')
-Setting.create(key: 'feature.debates', value: "true")
-Setting.create(key: 'feature.spending_proposals', value: "true")
-Setting.create(key: 'feature.twitter_login', value: "true")
-Setting.create(key: 'feature.facebook_login', value: "true")
-Setting.create(key: 'feature.google_login', value: "true")
-
-Setting.create(key: 'comments_body_max_length', value: '1000')
-
 puts "Creating Geozones"
 
 geozones = [
@@ -63,8 +39,8 @@ def create_user(email, username = Faker::Name.name)
   User.create!(username: username, email: email, password: pwd, password_confirmation: pwd, confirmed_at: Time.now, terms_of_service: "1")
 end
 
-admin = create_user('admin@madrid.es', 'admin')
-admin.create_administrator
+#admin = create_user('admin@madrid.es', 'admin')
+#admin.create_administrator
 
 moderator = create_user('mod@madrid.es', 'mod')
 moderator.create_moderator
