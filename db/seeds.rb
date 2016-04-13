@@ -43,13 +43,13 @@ Setting["youtube_handle"] = "channel/UCFmaChI9quIY7lwHplnacfg"
 Setting["blog_url"] = "/blog"
 
 # Public-facing URL of the app.
-Setting["url"] = "https://decide.madrid.es"
+Setting["url"] = "https://consularg.heroku.com"
 
 # Consul installation's organization name
-Setting["org_name"] = "Decide Madrid"
+Setting["org_name"] = "MDP"
 
 # Consul installation place name (City, Country...)
-Setting["place_name"] = "Madrid"
+Setting["place_name"] = "MDQ"
 
 # Feature flags
 Setting['feature.debates'] = true
